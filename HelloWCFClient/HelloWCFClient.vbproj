@@ -211,6 +211,7 @@
     <Compile Include="About.aspx.vb">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="clsComunicacionConFrontEnd.vb" />
     <Compile Include="Connected Services\AliveIdeaService\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
