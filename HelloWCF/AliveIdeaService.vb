@@ -1,4 +1,8 @@
-﻿Imports Data
+﻿Imports System.Security
+Imports System.Security.Claims
+Imports System.Security.Permissions
+Imports System.Threading
+Imports Data
 Imports Data.Data
 Imports Entities
 
@@ -15,7 +19,16 @@ Public Class AliveIdeaService : Implements IAliveIdeaService, IDisposable
         _context.Dispose()
     End Sub
 
+    '  <PrincipalPermission(SecurityAction.Demand, Role:="BUILTIN\\Administrators")>'opcion 2
     Public Function ObtenerMarcas() As List(Of Marca) Implements IAliveIdeaService.ObtenerMarcas
+        'Opcion 1
+        'Dim principal = Thread.CurrentPrincipal
+        'If Not principal.IsInRole("BUILTIN\\Administrators") Then
+        '    Throw New SecurityException("Accesso denegado")
+        'End If
+
+        'Opcion3 
+        '  ClaimsPrincipal.Current.HasClaim()
         Dim marcas = _context.Marcas.ToList()
         Return marcas
     End Function

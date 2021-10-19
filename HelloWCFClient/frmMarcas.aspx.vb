@@ -3,6 +3,9 @@
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim proxy As New AliveIdeaService.AliveIdeaServiceClient("NetTcpBinding_IAliveIdeaService")
+        'proxy.ClientCredentials.Windows.ClientCredential.UserName = "DOMAIN\\User"
+        'proxy.ClientCredentials.Windows.ClientCredential.Password = "Password"
+
         Try
 
 
