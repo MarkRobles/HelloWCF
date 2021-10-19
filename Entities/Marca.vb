@@ -7,74 +7,74 @@ Public Class Marca
 
 
 
-    Private MarcaId As Integer
+    Private Id As Integer
     <Key>
     <DataMember(Name:="Id", IsRequired:=True)>'El atributo DataMember se puede omitir y aun asi funjciona pero tienes menos control para personalizarlo.
-    Public Property P_MarcaId() As Integer
+    Public Property MarcaId() As Integer
         Get
-            Return MarcaId
+            Return Id
         End Get
         Set(ByVal value As Integer)
-            MarcaId = value
+            Id = value
         End Set
     End Property
 
 
-    Private DescripcionCorta As String
+    Private P_DescripcionCorta As String
     <DataMember(Name:="DescripcionCorta", IsRequired:=True)>
-    Public Property P_DescripcionCorta() As String
+    Public Property DescripcionCorta() As String
         Get
-            Return DescripcionCorta
+            Return P_DescripcionCorta
         End Get
         Set(ByVal value As String)
-            DescripcionCorta = value
+            P_DescripcionCorta = value
         End Set
     End Property
 
 
 
-    Private DescripcionLarga As String
+    Private P_DescripcionLarga As String
     <DataMember(Name:="DescripcionLarga", IsRequired:=True)>
-    Public Property P_DescripcionLarga() As String
+    Public Property DescripcionLarga() As String
         Get
-            Return DescripcionLarga
+            Return P_DescripcionLarga
         End Get
         Set(ByVal value As String)
-            DescripcionLarga = value
+            P_DescripcionLarga = value
         End Set
     End Property
 
 
-    Private VisibilidadPrecio As Boolean
+    Private P_VisibilidadPrecio As Boolean
     <DataMember(Name:="VisibilidadPrecio", IsRequired:=True)>
-    Public Property P_VisibilidadPrecio() As Boolean
+    Public Property VisibilidadPrecio() As Boolean
         Get
-            Return VisibilidadPrecio
+            Return P_VisibilidadPrecio
         End Get
         Set(ByVal value As Boolean)
-            VisibilidadPrecio = value
+            P_VisibilidadPrecio = value
         End Set
     End Property
 
-    Private Margen As Decimal
+    Private P_Margen As Decimal
     <DataMember(Name:="Margen")>
-    Public Property P_Margen() As Decimal
+    Public Property Margen() As Decimal
         Get
-            Return Margen
+            Return P_Margen
         End Get
         Set(ByVal value As Decimal)
-            Margen = value
+            P_Margen = value
         End Set
     End Property
 
-    Private Slogan As String
+    Private P_Slogan As String
     <DataMember(Name:="Slogan")>
-    Public Property P_Slogan() As String
+    Public Property Slogan() As String
         Get
-            Return Slogan
+            Return P_Slogan
         End Get
         Set(ByVal value As String)
-            Slogan = value
+            P_Slogan = value
         End Set
     End Property
 

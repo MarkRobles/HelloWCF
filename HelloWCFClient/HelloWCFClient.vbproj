@@ -134,9 +134,6 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <None Include="Connected Services\AliveIdeaService\AliveIdeaService.wsdl" />
-    <Content Include="Connected Services\AliveIdeaService\HelloWCFClient.AliveIdeaService.Marca.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\AliveIdeaService\item.disco" />
     <None Include="Connected Services\AliveIdeaService\configuration91.svcinfo" />
     <None Include="Connected Services\AliveIdeaService\configuration.svcinfo" />
@@ -172,6 +169,7 @@
     <None Include="Connected Services\AliveIdeaService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Entities.Marca.datasource" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -316,13 +314,13 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\AliveIdeaService\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Entities\Entities.vbproj">
       <Project>{CB984C60-2B09-460D-9A5D-3D959FA07FAF}</Project>
       <Name>Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AliveIdeaService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
