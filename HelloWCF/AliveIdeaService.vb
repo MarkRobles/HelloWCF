@@ -7,17 +7,24 @@ Imports Data.Data
 Imports Entities
 
 <ServiceBehavior(InstanceContextMode:=InstanceContextMode.PerCall)>
-Public Class AliveIdeaService : Implements IAliveIdeaService, IDisposable
+Public Class AliveIdeaService : Implements IAliveIdeaService
 
-    ReadOnly _context As New AliveIdeaDbContext
 
-    ''' <summary>
-    ''' WCF call this method for us. If this service implements IDisposable, each time it creates an instance of that service and ends
-    ''' with it. it will check if it implements IDisposable and dispose
-    ''' </summary>
-    Public Sub Dispose() Implements IDisposable.Dispose
-        _context.Dispose()
+    Public Sub New()
     End Sub
+
+    'Public Sub New(ByVal zipCodeRepository As IMarcasRepositorio)
+    '    Me.New(zipCodeRepository)
+    'End Sub
+
+
+    Public Sub New(ByVal zipCodeRepository As IMarcasRepositorio)
+        _MarcaRepositorio = zipCodeRepository
+    End Sub
+
+
+    Private _MarcaRepositorio As IMarcasRepositorio = Nothing
+
 
     '  <PrincipalPermission(SecurityAction.Demand, Role:="BUILTIN\\Administrators")>'opcion 2
     Public Function ObtenerMarcas() As List(Of Marca) Implements IAliveIdeaService.ObtenerMarcas
@@ -29,14 +36,18 @@ Public Class AliveIdeaService : Implements IAliveIdeaService, IDisposable
 
         'Opcion3 
         '  ClaimsPrincipal.Current.HasClaim()
-        Dim marcas = _context.Marcas.ToList()
+        Dim marcaRepo As IMarcasRepositorio = IIf(_MarcaRepositorio Is Nothing, New MarcaRepositorio, _MarcaRepositorio) 'Make class testable
+        Dim marcas = marcaRepo.ObtenerMarcas()
         Return marcas
+
     End Function
 
     '<OperationBehavior(TransactionScopeRequired:=true)>Esto aplica cuando haces varios inserts para que se hagan en una sola exhibicion
     Public Function CrearMarca(marca As Marca) As Integer Implements IAliveIdeaService.CrearMarca
-        _context.Marcas.Add(marca)
-        Return _context.SaveChanges()
+
+        Dim marcaRepo As IMarcasRepositorio = IIf(_MarcaRepositorio Is Nothing, New MarcaRepositorio, _MarcaRepositorio)
+        Dim resultado = marcaRepo.CrearMarca(marca)
+        Return resultado
 
 
     End Function
