@@ -157,10 +157,6 @@
       <Project>{c3607b66-8060-4cb3-902a-9ca42f1667b0}</Project>
       <Name>Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Entities\Entities.vbproj">
-      <Project>{cb984c60-2b09-460d-9a5d-3d959fa07faf}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HelloWCF\HelloWCF.vbproj">
       <Project>{fe692755-0d32-4518-a49a-f545a1761823}</Project>
       <Name>HelloWCF</Name>

@@ -125,13 +125,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.vbproj">
+      <Project>{B79E422E-6AF5-4DED-8B54-505D965F4C0F}</Project>
+      <Name>Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Data\Data.vbproj">
       <Project>{C3607B66-8060-4CB3-902A-9CA42F1667B0}</Project>
       <Name>Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Entities\Entities.vbproj">
-      <Project>{CB984C60-2B09-460D-9A5D-3D959FA07FAF}</Project>
-      <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />

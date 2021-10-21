@@ -2,9 +2,9 @@
 Imports System.Security.Claims
 Imports System.Security.Permissions
 Imports System.Threading
+Imports Contracts
 Imports Data
 Imports Data.Data
-Imports Entities
 
 <ServiceBehavior(InstanceContextMode:=InstanceContextMode.PerCall)>
 Public Class AliveIdeaService : Implements IAliveIdeaService

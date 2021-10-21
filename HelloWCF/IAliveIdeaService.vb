@@ -1,4 +1,5 @@
-﻿Imports Entities
+﻿Imports Contracts
+
 
 <ServiceContract()>
 Public Interface IAliveIdeaService

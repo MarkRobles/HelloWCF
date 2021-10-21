@@ -123,9 +123,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entities\Entities.vbproj">
-      <Project>{CB984C60-2B09-460D-9A5D-3D959FA07FAF}</Project>
-      <Name>Entities</Name>
+    <ProjectReference Include="..\Contracts\Contracts.vbproj">
+      <Project>{b79e422e-6af5-4ded-8b54-505d965f4c0f}</Project>
+      <Name>Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
