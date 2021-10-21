@@ -10,6 +10,10 @@ Imports Entities
 Namespace Data
     Public Class AliveIdeaDbContext
         Inherits DbContext
+        Public Sub New()
+            MyBase.New("name=AliveIdeaDbContext")
+            Database.SetInitializer(Of AliveIdeaDbContext)(Nothing)
+        End Sub
 
         Public Property Marcas As DbSet(Of Marca)
 
