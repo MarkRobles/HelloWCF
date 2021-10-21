@@ -133,6 +133,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <None Include="Connected Services\AliveIdeaService\AliveIdeaService.wsdl" />
+    <None Include="Connected Services\AliveIdeaService\item.disco" />
+    <None Include="Connected Services\AliveIdeaService\configuration91.svcinfo" />
+    <None Include="Connected Services\AliveIdeaService\configuration.svcinfo" />
+    <None Include="Connected Services\AliveIdeaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -275,6 +283,16 @@
     <Content Include="lib\popper.js\umd\popper-lite.min.js.map" />
     <Content Include="lib\popper.js\umd\popper.js.map" />
     <Content Include="lib\popper.js\umd\popper.min.js.map" />
+    <Content Include="Contracts.Marca.datasource" />
+    <None Include="Connected Services\AliveIdeaService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AliveIdeaService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AliveIdeaService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.css" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.min.css" />
@@ -482,6 +500,11 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="clsComunicacionConFrontEnd.vb" />
+    <Compile Include="Connected Services\AliveIdeaService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
@@ -583,6 +606,15 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.vbproj">
+      <Project>{B79E422E-6AF5-4DED-8B54-505D965F4C0F}</Project>
+      <Name>Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AliveIdeaService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
