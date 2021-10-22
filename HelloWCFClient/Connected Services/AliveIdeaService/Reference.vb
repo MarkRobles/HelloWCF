@@ -19,10 +19,10 @@ Namespace AliveIdeaService
     Public Interface IAliveIdeaService
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IAliveIdeaService/ObtenerMarcas", ReplyAction:="http://tempuri.org/IAliveIdeaService/ObtenerMarcasResponse")>  _
-        Function ObtenerMarcas() As Contracts.Marca()
+        Function ObtenerMarcas() As System.Collections.ObjectModel.ObservableCollection(Of Contracts.Marca)
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IAliveIdeaService/ObtenerMarcas", ReplyAction:="http://tempuri.org/IAliveIdeaService/ObtenerMarcasResponse")>  _
-        Function ObtenerMarcasAsync() As System.Threading.Tasks.Task(Of Contracts.Marca())
+        Function ObtenerMarcasAsync() As System.Threading.Tasks.Task(Of System.Collections.ObjectModel.ObservableCollection(Of Contracts.Marca))
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IAliveIdeaService/CrearMarca", ReplyAction:="http://tempuri.org/IAliveIdeaService/CrearMarcaResponse")>  _
         Function CrearMarca(ByVal marca As Contracts.Marca) As Integer
@@ -62,11 +62,11 @@ Namespace AliveIdeaService
             MyBase.New(binding, remoteAddress)
         End Sub
         
-        Public Function ObtenerMarcas() As Contracts.Marca() Implements AliveIdeaService.IAliveIdeaService.ObtenerMarcas
+        Public Function ObtenerMarcas() As System.Collections.ObjectModel.ObservableCollection(Of Contracts.Marca) Implements AliveIdeaService.IAliveIdeaService.ObtenerMarcas
             Return MyBase.Channel.ObtenerMarcas
         End Function
         
-        Public Function ObtenerMarcasAsync() As System.Threading.Tasks.Task(Of Contracts.Marca()) Implements AliveIdeaService.IAliveIdeaService.ObtenerMarcasAsync
+        Public Function ObtenerMarcasAsync() As System.Threading.Tasks.Task(Of System.Collections.ObjectModel.ObservableCollection(Of Contracts.Marca)) Implements AliveIdeaService.IAliveIdeaService.ObtenerMarcasAsync
             Return MyBase.Channel.ObtenerMarcasAsync
         End Function
         

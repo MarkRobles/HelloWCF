@@ -6,6 +6,13 @@ Public Class frmMarcas
     Inherits System.Web.UI.Page
 
 
+    Function LimpiarCampos()
+        txtDescripcionCorta.Text = String.Empty
+        txtDescripcionLarga.Text = String.Empty
+        chkVisibilidad.Checked = False
+        txtMargen.Text = String.Empty
+        txtSlogan.Text = String.Empty
+    End Function
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         ObtenerMarcas()
@@ -43,11 +50,11 @@ Public Class frmMarcas
             marca.Margen = txtMargen.Text.Trim
             marca.Slogan = txtSlogan.Text.Trim
 
-            'Dim resultado = proxy.CrearMarca(marca)
+            Dim resultado = proxy.CrearMarca(marca)
 
-            'If resultado >= 1 Then
-            '    clsComunicacionConFrontEnd.MostrarSweetAlert(Me, "Marca registrada correctamente")
-            'End If
+            If resultado >= 1 Then
+                clsComunicacionConFrontEnd.MostrarSweetAlert(Me, "Marca registrada correctamente")
+            End If
 
 
         Catch ex As Exception
@@ -55,6 +62,7 @@ Public Class frmMarcas
         Finally
             proxy.Close() 'Liberar los recursos utilizados por el proxy aunque ocurra un error
             ObtenerMarcas()
+            LimpiarCampos()
         End Try
     End Sub
 End Class

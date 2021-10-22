@@ -1,5 +1,4 @@
-﻿Imports Contracts
-
+﻿Imports System.ServiceModel
 
 <ServiceContract()>
 Public Interface IAliveIdeaService
