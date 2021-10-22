@@ -1,5 +1,6 @@
-﻿Imports Data.Data
-Imports Entities
+﻿Imports Contracts
+Imports Data.Data
+
 
 Public Class MarcaRepositorio : Implements IMarcasRepositorio, IDisposable
 

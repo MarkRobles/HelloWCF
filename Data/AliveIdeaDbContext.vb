@@ -4,8 +4,7 @@ Imports System.ComponentModel.DataAnnotations.Schema
 Imports System.Data.Entity
 Imports System.Data.Entity.ModelConfiguration.Conventions
 Imports System.Linq
-Imports Entities
-
+Imports Contracts
 
 Namespace Data
     Public Class AliveIdeaDbContext

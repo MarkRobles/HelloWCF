@@ -1,4 +1,5 @@
-﻿Imports Entities
+﻿Imports Contracts
+
 
 Public Interface IMarcasRepositorio
     Function ObtenerMarcas() As List(Of Marca)

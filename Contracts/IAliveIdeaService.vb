@@ -1,4 +1,4 @@
-﻿Imports Entities
+﻿Imports System.ServiceModel
 
 <ServiceContract()>
 Public Interface IAliveIdeaService

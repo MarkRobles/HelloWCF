@@ -160,15 +160,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="Connected Services\AliveIdeaService\item.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\AliveIdeaService\item1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\AliveIdeaService\item2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Entities.Marca.datasource" />
     <Content Include="libman.json" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.css.map" />
@@ -292,6 +283,16 @@
     <Content Include="lib\popper.js\umd\popper-lite.min.js.map" />
     <Content Include="lib\popper.js\umd\popper.js.map" />
     <Content Include="lib\popper.js\umd\popper.min.js.map" />
+    <Content Include="Contracts.Marca.datasource" />
+    <None Include="Connected Services\AliveIdeaService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AliveIdeaService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AliveIdeaService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.css" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.min.css" />
@@ -496,6 +497,7 @@
     </Compile>
     <Compile Include="About.aspx.vb">
       <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="clsComunicacionConFrontEnd.vb" />
     <Compile Include="Connected Services\AliveIdeaService\Reference.vb">
@@ -508,9 +510,11 @@
     </Compile>
     <Compile Include="Contact.aspx.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.vb">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -549,15 +553,18 @@
     </Compile>
     <Compile Include="Site.Master.vb">
       <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
     <Compile Include="Site.Mobile.Master.vb">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.vb">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
@@ -601,9 +608,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entities\Entities.vbproj">
-      <Project>{CB984C60-2B09-460D-9A5D-3D959FA07FAF}</Project>
-      <Name>Entities</Name>
+    <ProjectReference Include="..\Contracts\Contracts.vbproj">
+      <Project>{B79E422E-6AF5-4DED-8B54-505D965F4C0F}</Project>
+      <Name>Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

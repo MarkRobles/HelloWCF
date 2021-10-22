@@ -1,5 +1,5 @@
+Imports Contracts
 Imports Data
-Imports Entities
 Imports HelloWCF
 Imports Moq
 Imports NUnit.Framework
