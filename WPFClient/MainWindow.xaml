@@ -37,6 +37,7 @@
                 </TransformGroup>
             </DataGrid.RenderTransform>
         </DataGrid>
+        <Button x:Name="button" Content="Obtener" HorizontalAlignment="Left" Margin="507,22,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.346,0.021"/>
 
 
     </Grid>
