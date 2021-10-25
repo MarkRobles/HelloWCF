@@ -10,7 +10,7 @@ Class MainWindow
 
     Public Sub New()
         InitializeComponent()
-        ObtenerMarcas()
+
         Me.Title = "UI Running on Thread " & Thread.CurrentThread.ManagedThreadId & " | Process " & Process.GetCurrentProcess().Id.ToString()
     End Sub
 
@@ -90,5 +90,9 @@ Class MainWindow
             LimpiarCampos()
         End Try
 
+    End Sub
+
+    Private Sub button_Click(sender As Object, e As RoutedEventArgs) Handles button.Click
+        ObtenerMarcas()
     End Sub
 End Class
