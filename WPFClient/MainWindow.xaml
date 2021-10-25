@@ -13,7 +13,7 @@
         <TextBox x:Name="txtDescripcionLarga" HorizontalAlignment="Left" Height="23" Margin="27,163,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="chkVisibilidadPrecio"  Content="¿Precio visible al publico general?" HorizontalAlignment="Left" Margin="27,209,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblSlogan" Content="Slogan" FontWeight="Bold" HorizontalAlignment="Left" Margin="29,244,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="29,275,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="txtSlogan" HorizontalAlignment="Left" Height="23" Margin="29,275,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
